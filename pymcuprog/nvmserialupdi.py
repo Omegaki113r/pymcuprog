@@ -32,6 +32,7 @@ class Dut:
         self.nvmctrl_address = dev_info[DeviceInfoKeysAvr.NVMCTRL_BASE]
         address_key = DeviceMemoryInfoKeys.ADDRESS
         self.sigrow_address = device_memory_info.memory_info_by_name(MemoryNames.SIGNATURES)[address_key]
+        print("self.sigrow_address ",self.sigrow_address)
         self.fuses_address = device_memory_info.memory_info_by_name(MemoryNames.FUSES)[address_key]
         self.userrow_address = device_memory_info.memory_info_by_name(MemoryNames.USER_ROW)[address_key]
 

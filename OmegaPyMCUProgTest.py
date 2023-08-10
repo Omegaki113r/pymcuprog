@@ -5,7 +5,7 @@ Example usage of pymcuprog as a library to read the device ID
 
 # pymcuprog uses the Python logging module
 import logging
-logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.WARNING)
+logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.DEBUG)
 
 # Configure the session
 from pymcuprog.backend import SessionConfig
