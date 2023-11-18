@@ -29,3 +29,4 @@ backend.start_session(sessionconfig)
 # Read the target device_id
 device_id = backend.read_device_id()
 print ("Device ID is {0:06X}".format(int.from_bytes(device_id, byteorder="little")))
+backend.write_hex_to_target("boost.hex")
