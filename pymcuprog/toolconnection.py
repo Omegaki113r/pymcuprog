@@ -34,7 +34,7 @@ class ToolSerialConnection(ToolConnection):
     """
     serialport = None
 
-    def __init__(self, serialport="COM8", baudrate=DEFAULT_SERIALUPDI_BAUD, timeout=None):
+    def __init__(self, serialport="COM4", baudrate=DEFAULT_SERIALUPDI_BAUD, timeout=None):
         """
         :param serialport: Serial port name to connect to.
         :type serialport: str

@@ -241,7 +241,7 @@ class UpdiDatalink16bit(UpdiDatalink):
         :param address: address to load from
         :return: value read
         """
-        self.logger.info("LD from 0x{0:06X}".format(address))
+        self.logger.info("16LD from 0x{0:06X}".format(address))
         self.updi_phy.send(
             [constants.UPDI_PHY_SYNC, constants.UPDI_LDS | constants.UPDI_ADDRESS_16 | constants.UPDI_DATA_8,
              address & 0xFF, (address >> 8) & 0xFF])
@@ -254,7 +254,7 @@ class UpdiDatalink16bit(UpdiDatalink):
         :param address: address to load from
         :return: values read
         """
-        self.logger.info("LD from 0x{0:06X}".format(address))
+        self.logger.info("16LD16 from 0x{0:06X}".format(address))
         self.updi_phy.send(
             [constants.UPDI_PHY_SYNC, constants.UPDI_LDS | constants.UPDI_ADDRESS_16 | constants.UPDI_DATA_16,
              address & 0xFF, (address >> 8) & 0xFF])
@@ -320,7 +320,7 @@ class UpdiDatalink24bit(UpdiDatalink):
         :param address: address to load from
         :return: value read
         """
-        self.logger.info("LD from 0x{0:06X}".format(address))
+        self.logger.info("24LD from 0x{0:06X}".format(address))
         self.updi_phy.send(
             [constants.UPDI_PHY_SYNC, constants.UPDI_LDS | constants.UPDI_ADDRESS_24 | constants.UPDI_DATA_8,
              address & 0xFF, (address >> 8) & 0xFF, (address >> 16) & 0xFF])
@@ -333,7 +333,7 @@ class UpdiDatalink24bit(UpdiDatalink):
         :param address: address to load from
         :return: values read
         """
-        self.logger.info("LD from 0x{0:06X}".format(address))
+        self.logger.info("24LD16 from 0x{0:06X}".format(address))
         self.updi_phy.send(
             [constants.UPDI_PHY_SYNC, constants.UPDI_LDS | constants.UPDI_ADDRESS_24 | constants.UPDI_DATA_16,
              address & 0xFF, (address >> 8) & 0xFF, (address >> 16) & 0xFF])

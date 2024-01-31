@@ -187,6 +187,7 @@ class NvmAccessProviderSerial(NvmAccessProvider):
             chunk = data_aligned[0:write_chunk_size]
             self.logger.debug("Writing %d bytes to address 0x%06X", write_chunk_size, offset_aligned)
             if memtype_string == MemoryNames.FUSES:
+                print(chunk)
                 self.avr.nvm.write_fuse(offset_aligned, chunk)
             elif memtype_string == MemoryNames.LOCKBITS:
                 # Lockbits are accessed like fuses
@@ -199,6 +200,7 @@ class NvmAccessProviderSerial(NvmAccessProvider):
                 self.avr.nvm.write_flash(offset_aligned, chunk)
             offset_aligned += write_chunk_size
             data_aligned = data_aligned[write_chunk_size:]
+        print("done")
 
     def read(self, memory_info, offset, numbytes):
         """
